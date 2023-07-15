@@ -9,4 +9,9 @@ class window:
     else:
       print('Screen Error 1')
   def add_screen(self, screen_name):
-    self.all_screen.append(screen_name)
+    for screen in self.all_screen:
+      if screen == screen_name:
+        add = False
+        break
+    if add == True:
+      self.all_screen.append(screen_name)
